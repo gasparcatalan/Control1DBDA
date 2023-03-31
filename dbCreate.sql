@@ -50,7 +50,7 @@ ALTER TABLE public."prod_venta" OWNER TO postgres;
 
 
 ALTER TABLE public."prod_venta" ALTER COLUMN "id_prod_venta" ADD GENERATED ALWAYS AS IDENTITY (
-    SEQUENCE NAME public."prod-venta_id_prod_venta_seq"
+    SEQUENCE NAME public."prod_venta_id_prod_venta_seq"
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
