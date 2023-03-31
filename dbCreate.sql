@@ -1,6 +1,6 @@
 CREATE TABLE public."comuna" (
     "id_comuna" integer NOT NULL,
-    "nombre" "char"[] NOT NULL
+    "nombre" text NOT NULL
 );
 
 
@@ -18,10 +18,10 @@ ALTER TABLE public."comuna" ALTER COLUMN "id_comuna" ADD GENERATED ALWAYS AS IDE
 
 CREATE TABLE public."empleado" (
     "id_empleado" integer NOT NULL,
-    "apellido" "char"[] NOT NULL,
-    "nombre" "char"[] NOT NULL,
+    "apellido" text NOT NULL,
+    "nombre" text NOT NULL,
     "id_comuna" integer NOT NULL,
-    "cargo" "char"[] NOT NULL
+    "cargo" text NOT NULL
 );
 
 
@@ -60,7 +60,7 @@ ALTER TABLE public."prod_venta" ALTER COLUMN "id_prod_venta" ADD GENERATED ALWAY
 
 CREATE TABLE public."producto" (
     "id_producto" integer NOT NULL,
-    "nombre" "char"[] NOT NULL,
+    "nombre" text NOT NULL,
     "precio" integer NOT NULL
 );
 
@@ -98,7 +98,7 @@ ALTER TABLE public."sueldo" ALTER COLUMN "id_sueldo" ADD GENERATED ALWAYS AS IDE
 CREATE TABLE public."tienda" (
     "id_tienda" integer NOT NULL,
     "id_comuna" integer NOT NULL,
-    "nombre" "char"[] NOT NULL
+    "nombre" text NOT NULL
 );
 
 
@@ -133,7 +133,7 @@ ALTER TABLE public."tienda" ALTER COLUMN "id_tienda" ADD GENERATED ALWAYS AS IDE
 
 CREATE TABLE public."tipo_doc" (
     "id_doc" integer NOT NULL,
-    "tipo" "char"[] NOT NULL
+    "tipo" text NOT NULL
 );
 
 
@@ -151,8 +151,8 @@ ALTER TABLE public."tipo_doc" ALTER COLUMN "id_doc" ADD GENERATED ALWAYS AS IDEN
 CREATE TABLE public."vendedor" (
     "id_vendedor" integer NOT NULL,
     "id_empleado" integer NOT NULL,
-    "nombre" "char"[] NOT NULL,
-    "apellido" "char"[] NOT NULL
+    "nombre" text NOT NULL,
+    "apellido" text NOT NULL
 );
 
 
