@@ -41,8 +41,7 @@ CREATE TABLE public."prod_venta" (
     "id_prod_venta" integer NOT NULL,
     "id_producto" integer NOT NULL,
     "id_venta" integer NOT NULL,
-    "id_vendedor" integer NOT NULL,
-    "fecha" date NOT NULL
+    "id_vendedor" integer NOT NULL
 );
 
 
@@ -171,7 +170,8 @@ CREATE TABLE public."venta" (
     "id_venta" integer NOT NULL,
     "id_tienda" integer NOT NULL,
     "total" integer NOT NULL,
-    "id_tipo_doc" integer NOT NULL
+    "id_tipo_doc" integer NOT NULL,
+    "fecha" date NOT NULL
 );
 
 
