@@ -114,7 +114,7 @@ CREATE TABLE public."tienda_emp" (
 ALTER TABLE public."tienda_emp" OWNER TO postgres;
 
 ALTER TABLE public."tienda_emp" ALTER COLUMN "id_tienda_emp" ADD GENERATED ALWAYS AS IDENTITY (
-    SEQUENCE NAME public."tienda_,emp_id_tienda_emp_seq"
+    SEQUENCE NAME public."tienda_emp_id_tienda_emp_seq"
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
