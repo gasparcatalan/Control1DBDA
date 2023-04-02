@@ -13,17 +13,17 @@ WHERE p2.nombre = tabla.producto
 GROUP BY p2.nombre, tabla.mes;
 
 -- 2) Producto mas economico por tienda
-SELECT DISTINCT ON (tabla.nombre_tienda) tabla.nombre_tienda, p2.nombre, MIN(tabla.precio) as precio
+SELECT DISTINCT ON (tabla.nombre_tienda) tabla.nombre_tienda,
+    tabla.producto,
+    MIN(tabla.precio)
 FROM(
-	SELECT t.nombre AS nombre_tienda, p.nombre AS producto, p.precio as precio
-	FROM tienda t, venta v, prod_venta pv, producto p
-	WHERE t.id_tienda = v.id_tienda AND p.id_producto = pv.id_producto AND pv.id_venta = v.id_venta
-	GROUP BY nombre_tienda, producto, precio
-	ORDER BY nombre_tienda, precio ASC
-	)tabla,
-	producto p2
-WHERE p2.nombre = tabla.producto
-GROUP BY tabla.nombre_tienda, p2.nombre;
--- Obtiene los precios mayores por tienda xd
--- Falta tomar la fila con el menor de precio por tienda
+    SELECT t.nombre AS nombre_tienda, p.nombre AS producto, p.precio as precio
+    FROM tienda t, venta v, prod_venta pv, producto p
+    WHERE t.id_tienda = v.id_tienda AND p.id_producto = pv.id_producto AND pv.id_venta = v.id_venta
+    GROUP BY nombre_tienda, producto, precio
+    ORDER BY nombre_tienda, precio ASC
+    )tabla,
+    producto p2
+GROUP BY tabla.nombre_tienda, tabla.producto
+
 
