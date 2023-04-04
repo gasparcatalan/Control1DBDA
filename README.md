@@ -11,7 +11,7 @@ Para la creacion de la base de datos desde consola PSQL:
     *Si se instalo con valores por basicos, apretar enter hasta tener que usar consola.
 
 2- Crear la base de datos de prueba usando el siguiente comando:
-    CREATE TABLE tiendas_comerciales
+    CREATE DATABASE tiendas_comerciales;
     
     *Si la base de datos se creo correctamente aparecera al usar el comando "\l".
 
